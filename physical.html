@@ -9,9 +9,9 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <!-- custom css file link  --> 
+    <!-- custom css file link  -->
 
-    <link rel="stylesheet" href="physical.css"> 
+    <link rel="stylesheet" href="physical.css">
 
 
 
@@ -60,64 +60,74 @@
     <section class="service" id="service">
 
         <h1 class="heading">Body Mass Index</h1>
-        <div class="bmi" >
-        <div class="login-page">
-            <div onclick="bmi()" class="form">
-                <form class="register-form">
-                    <input type="text" id="num-one" placeholder="Enter Your weight in Kg" />
-                    <input type="text" id="num-two" placeholder="Enter Your Height in cm ">
-                    <!-- <button   class="btn">Calculate</button> -->
+        <div class="bmi">
+            <div class="login-page">
+                <div onclick="bmi()" class="form">
+                    <form class="register-form">
+                        <input type="text" id="num-one" placeholder="Enter Your weight in Kg" />
+                        <input type="text" id="num-two" placeholder="Enter Your Height in cm ">
+                        <!-- <button   class="btn">Calculate</button> -->
 
-                </form>
-
+                    </form>
+                    <button onclick="bmi()" class="btn">Calculate BMI</button>
+                </div>
             </div>
-        </div>
-
-      
 
 
 
 
 
-        <script>
-            function bmi() {
 
-                var numOne = document.getElementById('num-one');
-                var numTwo = document.getElementById('num-two');
-                var addSum = document.getElementById('add-sum');
-                numOne.addEventListener('input', add);
-                numTwo.addEventListener('input', add);
-                function add() {
 
-                    var one = parseFloat(numOne.value) || 1;
-                    var two = parseFloat(numTwo.value) || 1;
-                    two = two / 100
-                    two *= two
-                    var sum = one / two
-                    sum = sum.toFixed(2)
-                    addSum.innerText = sum;
-                    console.log(sum);
-                }
-            }
-
-        </script>
-        </form>
-        </form>
-        <div class="login-page">
-            <div class="form" id="calc">
-                
-                <div class="bmi_result" id="result"></div>
-                    <h2>BMI:</h2>
+           
+            </form>
+            </form>
+            <div class="login-page">
+                <div class="form" id="calc">
+                    <img id="myImg" src="images/fit.png" alt="123" width=25%>
+                    <div class="bmi_result" id="result"></div>
+                    <div style="text-align:center;">
+                    <h2>BMI</h2>
+                   
                     <h2 id="add-sum"></h2>
+                        </div>
 
 
-
+                </div>
             </div>
-        </div>
         </div>
         </setion>
 
+<script>
+    function bmi() {
 
+        var numOne = document.getElementById('num-one');
+        var numTwo = document.getElementById('num-two');
+        var addSum = document.getElementById('add-sum');
+        numOne.addEventListener('input', add);
+        numTwo.addEventListener('input', add);
+        function add() {
+
+            var one = parseFloat(numOne.value) || 1;
+            var two = parseFloat(numTwo.value) || 1;
+            two = two / 100
+            two *= two
+            var bmi = one / two
+            bmi = bmi.toFixed(2)
+            addSum.innerText = bmi;
+            if(bmi<18){
+             document.getElementById("myImg").src = "images/thin.png"; 
+             document.getElementById("calc").style.backgroundColor = "red";  
+            }
+            else if(bmi>24){
+                 document.getElementById("myImg").src = "images/fat.png";
+                document.getElementById("calc").style.backgroundColor = "red";
+                 
+            }
+        }
+    }
+
+</script>
 
     </section>
 
