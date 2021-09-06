@@ -127,7 +127,7 @@ header.header-active .navbar a{
 
 .home{
     min-height: 100vh;
-    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../images/home.jpg) no-repeat;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(images/home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -154,6 +154,7 @@ header.header-active .navbar a{
 .bmi{
     display: flex;
     flex:1 0 auto;
+    background-color: #24262b;
 }
 .login-page{
     width: 1000px;
@@ -255,7 +256,7 @@ header.header-active .navbar a{
     margin: auto;
     min-height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     transform-style: preserve-3d;
     transform-origin: center;
@@ -265,7 +266,7 @@ header.header-active .navbar a{
 .card{
     flex-basis:20% ;
     box-shadow: 5px 6px 10px grey;
-    transform: rotateX(60deg);
+    transform: rotateX(40deg);
     transition: transform 1s;
 }
 
@@ -300,7 +301,77 @@ transform: rotateX(360deg)  translateZ(300px);
 
 }
 
-
+/* Footer section */
+.container{
+	max-width: 800px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex:1 0 auto;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
 
 
 
