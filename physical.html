@@ -8,6 +8,7 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">"> -->
 
     <!-- custom css file link  -->
 
@@ -56,8 +57,8 @@
 
     <!-- BMI calculator section start  -->
 
-    <!-- <section class="about" id="about"> -->
-    <section class="service" id="service">
+    <section class="service" id="about">
+    <!-- <section class="service" id="service"> -->
 
         <h1 class="heading">Body Mass Index</h1>
         <div class="bmi">
@@ -69,7 +70,7 @@
                         <!-- <button   class="btn">Calculate</button> -->
 
                     </form>
-                    <button onclick="bmi()" class="btn">Calculate BMI</button>
+                    <!-- <button onclick="bmi()" class="btn">Calculate BMI</button> -->
                 </div>
             </div>
 
@@ -79,7 +80,7 @@
 
 
 
-           
+
             </form>
             </form>
             <div class="login-page">
@@ -87,10 +88,10 @@
                     <img id="myImg" src="images/fit.png" alt="123" width=25%>
                     <div class="bmi_result" id="result"></div>
                     <div style="text-align:center;">
-                    <h2>BMI</h2>
-                   
-                    <h2 id="add-sum"></h2>
-                        </div>
+                        <h2>BMI</h2>
+
+                        <h2 id="add-sum"></h2>
+                    </div>
 
 
                 </div>
@@ -98,36 +99,36 @@
         </div>
         </setion>
 
-<script>
-    function bmi() {
+        <script>
+            function bmi() {
 
-        var numOne = document.getElementById('num-one');
-        var numTwo = document.getElementById('num-two');
-        var addSum = document.getElementById('add-sum');
-        numOne.addEventListener('input', add);
-        numTwo.addEventListener('input', add);
-        function add() {
+                var numOne = document.getElementById('num-one');
+                var numTwo = document.getElementById('num-two');
+                var addSum = document.getElementById('add-sum');
+                numOne.addEventListener('input', add);
+                numTwo.addEventListener('input', add);
+                function add() {
 
-            var one = parseFloat(numOne.value) || 1;
-            var two = parseFloat(numTwo.value) || 1;
-            two = two / 100
-            two *= two
-            var bmi = one / two
-            bmi = bmi.toFixed(2)
-            addSum.innerText = bmi;
-            if(bmi<18){
-             document.getElementById("myImg").src = "images/thin.png"; 
-             document.getElementById("calc").style.backgroundColor = "red";  
+                    var one = parseFloat(numOne.value) || 1;
+                    var two = parseFloat(numTwo.value) || 1;
+                    two = two / 100
+                    two *= two
+                    var bmi = one / two
+                    bmi = bmi.toFixed(2)
+                    addSum.innerText = bmi;
+                    if (bmi < 18) {
+                        document.getElementById("myImg").src = "images/thin.png";
+                        document.getElementById("calc").style.backgroundColor = "red";
+                    }
+                    else if (bmi > 24) {
+                        document.getElementById("myImg").src = "images/fat.png";
+                        document.getElementById("calc").style.backgroundColor = "red";
+
+                    }
+                }
             }
-            else if(bmi>24){
-                 document.getElementById("myImg").src = "images/fat.png";
-                document.getElementById("calc").style.backgroundColor = "red";
-                 
-            }
-        }
-    }
 
-</script>
+        </script>
 
     </section>
 
@@ -288,7 +289,8 @@
                 <img src="images/Breakfast.jpeg" alt="">
                 <div class="content">
                     <h1>Breakfast</h1>
-                    <p>peanut banana,Avocado toast,Overnight oats, sandwich<p>
+                    <p>peanut banana,Avocado toast,Overnight oats, sandwich
+                    <p>
                 </div>
             </div>
             <div class="card card2">
@@ -307,8 +309,44 @@
             </div>
         </div>
     </section>
+    <!-- Footer section starts -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affiliate program</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>online Quries</h4>
+                    <ul>
+                        <li><a href="#">Google</a></li>
+                        <li><a href="#">Play Store</a></li>
+                        <li><a href="#">App Store</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </footer>
 
-    
+
 
 
 
