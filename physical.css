@@ -257,12 +257,48 @@ header.header-active .navbar a{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    perspective: 2000px;
+}
+
+.card{
+    flex-basis:20% ;
+    box-shadow: 5px 6px 10px grey;
+    transform: rotateX(60deg);
+    transition: transform 1s;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+}
+.content{
+    padding: 20px 10px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+.content h1{
+    font-size: 4rem;
+}
+.content p{
+    font-size: 1.5rem;
 }
 
 
+.card1:hover{
+transform: rotateX(0deg) translateZ(300px);
 
+}
+.card2:hover{
+transform: rotateX(0deg) rotateY(360deg) translateZ(300px);
 
+}
+.card3:hover{
+transform: rotateX(360deg)  translateZ(300px);
 
+}
 
 
 
